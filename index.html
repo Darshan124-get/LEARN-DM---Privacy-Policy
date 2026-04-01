@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | LEARN DM</title>
+    
+    <!-- Modern professional font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Light Theme Dimensions & Variables */
+            --bg-color: #f8fafc;
+            --surface-color: #ffffff;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --accent-color: #3b82f6;
+            --accent-hover: #2563eb;
+            --border-color: #e2e8f0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                /* Dark Theme Overrides */
+                --bg-color: #0f172a;
+                --surface-color: #1e293b;
+                --text-primary: #f8fafc;
+                --text-secondary: #cbd5e1;
+                --border-color: #334155;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Nav Header */
+        header {
+            background-color: var(--surface-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-logo {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent-color), #8b5cf6);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .brand-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 2rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, var(--accent-color), #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .last-updated {
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        /* Content Area */
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .policy-container {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem 3rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 4rem;
+        }
+
+        .policy-intro {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+        }
+
+        /* Accordion Style */
+        .accordion-item {
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            background-color: var(--surface-color);
+        }
+
+        .accordion-header {
+            width: 100%;
+            text-align: left;
+            padding: 1.5rem;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.15rem;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .accordion-header:hover {
+            background-color: rgba(59, 130, 246, 0.05);
+        }
+
+        .accordion-icon {
+            transform: rotate(0deg);
+            transition: transform 0.3s ease;
+            color: var(--accent-color);
+        }
+
+        .accordion-item.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
+        }
+
+        .accordion-inner {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        .accordion-inner p {
+            margin-bottom: 1rem;
+        }
+
+        .accordion-inner ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .accordion-inner li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .contact-btn:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .policy-container { padding: 1.5rem; }
+            main { padding: 1rem; }
+            .accordion-header { padding: 1.25rem; font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="brand-logo">L</div>
+            <div class="brand-name">LEARN DM by Crafzio</div>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h1>Privacy Policy</h1>
+        <p class="last-updated">Last Updated: <span id="currentDate">April 2026</span></p>
+    </div>
+
+    <main>
+        <div class="policy-container">
+            <p class="policy-intro">
+                Welcome to <strong>LEARN DM</strong>. Crafzio built the LEARN DM application as a Free educational app. This page informs you of our policies regarding the collection, use, and disclosure of Personal Information if you decide to use our Service.
+            </p>
+
+            <!-- Section 1 -->
+            <div class="accordion-item active">
+                <button class="accordion-header">
+                    1. Information Collection and Use
+                    <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="accordion-content" style="max-height: 2000px;">
+                    <div class="accordion-inner">
+                        <p>For a better experience, while using our Service, we may require you to provide us with certain personally identifiable information. The information that we request will be retained by us and used as described in this privacy policy.</p>
+                        <p>The app does use third-party services that may collect information used to identify you.</p>
+                        <p>Link to the privacy policy of third-party service providers used by the app:</p>
+                        <ul>
+                            <li><a href="https://policies.google.com/privacy" target="_blank" style="color: var(--accent-color);">Google Play Services</a></li>
+                            <li><a href="https://support.google.com/admob/answer/6128543" target="_blank" style="color: var(--accent-color);">AdMob</a></li>
+                            <li><a href="https://firebase.google.com/policies/analytics" target="_blank" style="color: var(--accent-color);">Google Analytics for Firebase</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2 -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    2. Device Permissions Used
+                    <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="accordion-content">
+                    <div class="accordion-inner">
+                        <p>Our application requests certain on-device permissions to function correctly:</p>
+                        <ul>
+                            <li><strong>Internet:</strong> To check for new course updates, deliver online assessments, and serve advertisements.</li>
+                            <li><strong>Notifications:</strong> To send you daily learning streaks and smart auto-reminders (which you can disable anytime in settings).</li>
+                            <li><strong>Alarms & Scheduling:</strong> To ensure your daily reminders fire accurately based on your local time zone.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3 -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    3. Log Data and Analytics
+                    <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="accordion-content">
+                    <div class="accordion-inner">
+                        <p>We want to inform you that whenever you use our Service, in a case of an error in the app we collect data and information (through third-party products, like Firebase) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol ("IP") address, device name, operating system version, the configuration of the app when utilizing our Service, the time and date of your use of the Service, and other statistics.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 4 -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    4. Cookies
+                    <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="accordion-content">
+                    <div class="accordion-inner">
+                        <p>Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. Our Service does not use these "cookies" explicitly. However, the app may use third-party code and libraries that use "cookies" to collect information and improve their services.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 5 -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    5. Security & Children's Privacy
+                    <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="accordion-content">
+                    <div class="accordion-inner">
+                        <p><strong>Security:</strong> We value your trust in providing us your information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.</p>
+                        <p><strong>Children's Privacy:</strong> These Services do not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us.</p>
+                <a href="mailto:crafzio.help.team@gmail.com" class="contact-btn">Contact Support</a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year">2026</span> Crafzio. All rights reserved.</p>
+        <p>Built for the LEARN DM Application.</p>
+    </footer>
+
+    <script>
+        // Set dynamic dates
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        const d = new Date();
+        document.getElementById('currentDate').textContent = `${monthNames[d.getMonth()]} ${d.getFullYear()}`;
+
+        // Accordion functionality
+        const accordions = document.querySelectorAll('.accordion-header');
+        
+        accordions.forEach(acc => {
+            acc.addEventListener('click', function() {
+                // Toggle active class on parent
+                const parent = this.parentElement;
+                const content = this.nextElementSibling;
+                
+                // Toggle self
+                if (parent.classList.contains('active')) {
+                    parent.classList.remove('active');
+                    content.style.maxHeight = null;
+                } else {
+                    // Close others (optional)
+                    // document.querySelectorAll('.accordion-item').forEach(item => {
+                    //    item.classList.remove('active');
+                    //    item.querySelector('.accordion-content').style.maxHeight = null;
+                    // });
+                    
+                    parent.classList.add('active');
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
